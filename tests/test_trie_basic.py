@@ -1,6 +1,14 @@
-# tests/test_trie_basic.py
-from src.trie import Trie
+import os, sys
 from pathlib import Path
+
+# --- ADD THIS BLOCK ---
+# Add the project root (one level up) to the Python path
+# so that we can 'from src.trie import Trie'
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(ROOT))
+# --- END OF BLOCK ---
+
+from src.trie import Trie
 from src.io_utils import load_csv
 
 RES = Path(__file__).parent / 'resources' / 'small_words.csv'
